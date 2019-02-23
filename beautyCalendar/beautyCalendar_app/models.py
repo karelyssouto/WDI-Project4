@@ -11,14 +11,14 @@ class MakeupArtist(models.Model):
         return self.name
 
 class Appointment(models.Model):
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField()
     location = models.CharField(max_length=150)
     category = models.CharField(max_length=50)
     artistId = models.ForeignKey(MakeupArtist, on_delete=models.CASCADE, blank=True, null=True, related_name="appointments")
     clientId = models.AutoField(primary_key=True)
 
     def __str__(self):
-        return self.date
+        return self.location
 
 class Client(models.Model):
     name = models.CharField(max_length=50)
