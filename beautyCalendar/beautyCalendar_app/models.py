@@ -6,6 +6,7 @@ class MakeupArtist(models.Model):
     name = models.CharField(max_length=50)
     hometown = models.CharField(max_length=50)
     artistId = models.AutoField(primary_key=True)
+    img = models.CharField(max_length=250)
 
     def __str__(self):
         return self.name

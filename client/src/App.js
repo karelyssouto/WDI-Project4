@@ -1,25 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
+import LandingPage from './components/LandingPage';
+import MakeupArtistProfile from './components/MakeupArtist/MakeupArtistProfile'
+import axios from 'axios'
+
+
 
 class App extends Component {
+  state = {
+    makeupartist: {
+      name: '',
+      hometown: '',
+      img: '',
+      appointments:[{
+        date:'',
+        location:'',
+        category:'',
+        client:{
+          name:'',
+          img:'',
+          skinTone: '',
+          skinType:''
+        }
+      }]
+    }
+  }
+  componentDidMount() {
+    this.getCurrentUser()
+  }
+  getCurrentUser = () => {
+    axios.get('/api/makeupartist').then((res) =>
+      this.setState({ makeupartist: res.data }))
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Router>
+          <Switch>
+            <Route exact path='/' component={LandingPage} />
+            <Route exact path='/makeupartist' component={MakeupArtistProfile} />
+          </Switch>
+        </Router>
       </div>
     );
   }

@@ -108,6 +108,9 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000/'
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
