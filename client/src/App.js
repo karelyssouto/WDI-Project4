@@ -2,37 +2,14 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import LandingPage from './components/LandingPage';
-import MakeupArtistProfile from './components/MakeupArtist/MakeupArtistProfile'
-import axios from 'axios'
+import MakeupArtistForm from './components/MakeupArtist/MakeupArtistForm'
+import MakeupArtistList from './components/MakeupArtist/MakeupArtistList';
+import MakeupArtistProfile from './components/MakeupArtist/MakeupArtistProfile';
 
 
 
 class App extends Component {
-  state = {
-    makeupartist: {
-      name: '',
-      hometown: '',
-      img: '',
-      appointments:[{
-        date:'',
-        location:'',
-        category:'',
-        client:{
-          name:'',
-          img:'',
-          skinTone: '',
-          skinType:''
-        }
-      }]
-    }
-  }
-  componentDidMount() {
-    this.getCurrentUser()
-  }
-  getCurrentUser = () => {
-    axios.get('/api/makeupartist').then((res) =>
-      this.setState({ makeupartist: res.data }))
-  }
+
 
   render() {
     return (
@@ -40,7 +17,9 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/' component={LandingPage} />
-            <Route exact path='/makeupartist' component={MakeupArtistProfile} />
+            <Route exact path='/makeupartist' component={MakeupArtistList} />
+            <Route exact path='/new' component={MakeupArtistForm} />
+            <Route exact path='/makeupartist/:id' component={MakeupArtistProfile} />
           </Switch>
         </Router>
       </div>

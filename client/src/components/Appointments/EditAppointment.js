@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Appointments extends Component {
+class EditAppointment extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class Appointments extends Component {
     }
 }
 
-export default Appointments;
+export default EditAppointment;
