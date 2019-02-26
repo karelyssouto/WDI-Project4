@@ -19,4 +19,4 @@ class MakeupArtistSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MakeupArtist
-        fields = ('artistId', 'name', 'hometown', 'appointments')
+        fields = ('artistId', 'name', 'hometown', 'appointments', 'img')

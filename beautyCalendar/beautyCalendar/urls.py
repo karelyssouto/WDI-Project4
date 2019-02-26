@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers                   
+from beautyCalendar_app import views                           
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('beautyCalendar_app.urls'))
+    path('api/v1/', include('beautyCalendar_app.urls')),
+    # path('', include('react.urls'))
 ]
