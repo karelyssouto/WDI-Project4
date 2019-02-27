@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import MakeupArtist from './MakeupArtist';
+import { Media } from 'reactstrap';
+import { Link } from 'react-router-dom'
+
 
 class MakeupArtistList extends Component {
     state={
@@ -17,11 +19,18 @@ class MakeupArtistList extends Component {
         return (
             <div>
                 {this.state.makeupartist.map((makeupartist, i) =>{
-                    return (<MakeupArtist
-                        key={i}
-                        makeupartist={makeupartist}
-                        makeupartistId={makeupartist.artistId}
-                    />)
+                    return (<Media>
+                                <Media left key={i}>
+                                    <Media object src={makeupartist.img} alt='Makeup Artist' />
+                                </Media>
+                                <Media body>
+                                    <Media heading>
+                                        <Link to={`/makeupartist/${makeupartist.artistId}`}>{makeupartist.name}</Link>
+                                    </Media>
+                                        {makeupartist.hometown}
+                                    </Media>
+                            </Media>
+                    )   
                 })}
 
             </div>

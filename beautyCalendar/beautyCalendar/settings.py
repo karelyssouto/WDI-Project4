@@ -78,7 +78,9 @@ WSGI_APPLICATION = 'beautyCalendar.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'beautycalendar',
+        'NAME': 'foo',
+	'USER': 'foouser',
+	'PASSWORD': 'foo',
         'HOST': 'localhost'
     }
 }

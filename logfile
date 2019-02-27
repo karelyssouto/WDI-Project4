@@ -1,0 +1,85 @@
+2019-02-26 12:37:59.016 EST [27452] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-02-26 12:37:59.016 EST [27452] LOG:  listening on IPv6 address "::1", port 5432
+2019-02-26 12:37:59.017 EST [27452] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-02-26 12:37:59.031 EST [27453] LOG:  database system was shut down at 2019-02-26 12:37:58 EST
+2019-02-26 12:37:59.035 EST [27452] LOG:  database system is ready to accept connections
+2019-02-26 12:39:42.068 EST [28189] FATAL:  role "beautyCalendaruser" does not exist
+2019-02-26 12:40:13.466 EST [27452] LOG:  received fast shutdown request
+2019-02-26 12:40:13.471 EST [27452] LOG:  aborting any active transactions
+2019-02-26 12:40:13.472 EST [27452] LOG:  background worker "logical replication launcher" (PID 27459) exited with exit code 1
+2019-02-26 12:40:13.472 EST [27454] LOG:  shutting down
+2019-02-26 12:40:13.480 EST [27452] LOG:  database system is shut down
+2019-02-26 12:42:23.512 EST [29048] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-02-26 12:42:23.512 EST [29048] LOG:  listening on IPv6 address "::1", port 5432
+2019-02-26 12:42:23.513 EST [29048] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-02-26 12:42:23.526 EST [29049] LOG:  database system was shut down at 2019-02-26 12:40:13 EST
+2019-02-26 12:42:23.530 EST [29048] LOG:  database system is ready to accept connections
+2019-02-26 12:42:29.140 EST [29048] LOG:  received fast shutdown request
+2019-02-26 12:42:29.145 EST [29048] LOG:  aborting any active transactions
+2019-02-26 12:42:29.146 EST [29048] LOG:  background worker "logical replication launcher" (PID 29055) exited with exit code 1
+2019-02-26 12:42:29.147 EST [29050] LOG:  shutting down
+2019-02-26 12:42:29.155 EST [29048] LOG:  database system is shut down
+2019-02-26 12:43:15.251 EST [29291] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-02-26 12:43:15.251 EST [29291] LOG:  listening on IPv6 address "::1", port 5432
+2019-02-26 12:43:15.252 EST [29291] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-02-26 12:43:15.267 EST [29292] LOG:  database system was shut down at 2019-02-26 12:42:29 EST
+2019-02-26 12:43:15.271 EST [29291] LOG:  database system is ready to accept connections
+2019-02-26 12:43:50.760 EST [29291] LOG:  received fast shutdown request
+2019-02-26 12:43:50.766 EST [29291] LOG:  aborting any active transactions
+2019-02-26 12:43:50.767 EST [29291] LOG:  background worker "logical replication launcher" (PID 29298) exited with exit code 1
+2019-02-26 12:43:50.767 EST [29293] LOG:  shutting down
+2019-02-26 12:43:50.776 EST [29291] LOG:  database system is shut down
+2019-02-26 12:44:30.839 EST [29776] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-02-26 12:44:30.839 EST [29776] LOG:  listening on IPv6 address "::1", port 5432
+2019-02-26 12:44:30.840 EST [29776] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-02-26 12:44:30.856 EST [29777] LOG:  database system was shut down at 2019-02-26 12:44:30 EST
+2019-02-26 12:44:30.866 EST [29776] LOG:  database system is ready to accept connections
+2019-02-26 13:00:35.215 EST [29958] FATAL:  lock file "postmaster.pid" already exists
+2019-02-26 13:00:35.215 EST [29958] HINT:  Is another postmaster (PID 29776) running in data directory "/Users/karelyssouto/Desktop/Beauty-Calendar/Project/data"?
+2019-02-26 13:04:30.231 EST [29776] LOG:  received fast shutdown request
+2019-02-26 13:04:30.232 EST [29776] LOG:  aborting any active transactions
+2019-02-26 13:04:30.234 EST [29776] LOG:  background worker "logical replication launcher" (PID 29783) exited with exit code 1
+2019-02-26 13:04:30.234 EST [29778] LOG:  shutting down
+2019-02-26 13:04:30.239 EST [29776] LOG:  database system is shut down
+2019-02-26 13:04:34.617 EST [30358] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-02-26 13:04:34.617 EST [30358] LOG:  listening on IPv6 address "::1", port 5432
+2019-02-26 13:04:34.618 EST [30358] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-02-26 13:04:34.632 EST [30359] LOG:  database system was shut down at 2019-02-26 13:04:30 EST
+2019-02-26 13:04:34.639 EST [30358] LOG:  database system is ready to accept connections
+2019-02-26 13:07:04.081 EST [30448] FATAL:  database "karelyssouto" does not exist
+2019-02-26 13:07:34.800 EST [30527] FATAL:  database "beautyCalendar" does not exist
+2019-02-26 13:12:28.228 EST [31029] FATAL:  role "beautyCalendaruser" does not exist
+2019-02-26 13:13:03.087 EST [31052] FATAL:  database "beautyCalendar" does not exist
+2019-02-26 13:13:09.425 EST [31149] FATAL:  database "beautyCalendar" does not exist
+2019-02-26 13:14:08.094 EST [31167] FATAL:  role "beautyCalendaruser" does not exist
+2019-02-26 13:14:34.586 EST [31405] FATAL:  lock file "postmaster.pid" already exists
+2019-02-26 13:14:34.586 EST [31405] HINT:  Is another postmaster (PID 30358) running in data directory "/Users/karelyssouto/Desktop/Beauty-Calendar/Project/data"?
+2019-02-26 13:15:32.735 EST [31620] FATAL:  role "beautyCalendaruser" does not exist
+2019-02-26 13:15:42.812 EST [31631] FATAL:  database "beautyCalendar" does not exist
+2019-02-26 13:16:56.723 EST [30358] LOG:  received fast shutdown request
+2019-02-26 13:16:56.728 EST [30358] LOG:  aborting any active transactions
+2019-02-26 13:16:56.728 EST [30358] LOG:  background worker "logical replication launcher" (PID 30365) exited with exit code 1
+2019-02-26 13:16:56.729 EST [30360] LOG:  shutting down
+2019-02-26 13:16:56.734 EST [30358] LOG:  database system is shut down
+2019-02-26 13:17:02.496 EST [31955] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-02-26 13:17:02.496 EST [31955] LOG:  listening on IPv6 address "::1", port 5432
+2019-02-26 13:17:02.497 EST [31955] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-02-26 13:17:02.511 EST [31956] LOG:  database system was shut down at 2019-02-26 13:16:56 EST
+2019-02-26 13:17:02.516 EST [31955] LOG:  database system is ready to accept connections
+2019-02-26 13:17:16.845 EST [32135] FATAL:  database "beautyCalendar" does not exist
+2019-02-26 14:16:36.758 EST [33434] FATAL:  database "beautyCalendar" does not exist
+2019-02-26 14:17:24.380 EST [33745] FATAL:  database "./data/" does not exist
+2019-02-26 14:18:23.788 EST [31955] LOG:  received fast shutdown request
+2019-02-26 14:18:23.788 EST [31955] LOG:  aborting any active transactions
+2019-02-26 14:18:23.789 EST [31955] LOG:  background worker "logical replication launcher" (PID 31962) exited with exit code 1
+2019-02-26 14:18:23.789 EST [31957] LOG:  shutting down
+2019-02-26 14:18:23.803 EST [31955] LOG:  database system is shut down
+2019-02-26 14:18:39.654 EST [34152] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-02-26 14:18:39.654 EST [34152] LOG:  listening on IPv6 address "::1", port 5432
+2019-02-26 14:18:39.656 EST [34152] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-02-26 14:18:39.674 EST [34153] LOG:  database system was shut down at 2019-02-26 14:18:39 EST
+2019-02-26 14:18:39.683 EST [34152] LOG:  database system is ready to accept connections
+2019-02-26 14:21:25.753 EST [34603] ERROR:  relation "auth_user" does not exist at character 280
+2019-02-26 14:21:25.753 EST [34603] STATEMENT:  SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'karelyssouto'
+2019-02-26 14:21:45.382 EST [34698] ERROR:  relation "auth_user" does not exist at character 280
+2019-02-26 14:21:45.382 EST [34698] STATEMENT:  SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'karelyssouto'

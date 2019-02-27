@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom'
 import { Media } from 'reactstrap';
 
 class MakeupArtist extends Component {
+    
     render() {
         return (
             <div>
                 <Media>
-                    <Media left href="#">
+                    <Media left>
                         <Media object src={this.props.makeupartist.img} alt='Makeup Artist' />
                     </Media>
                     <Media body>

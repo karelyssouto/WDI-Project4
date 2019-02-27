@@ -1,0 +1,1 @@
+/usr/local/Cellar/postgresql/11.2/bin/postgres "-D" "/Users/karelyssouto/Desktop/Beauty-Calendar/Project/data"

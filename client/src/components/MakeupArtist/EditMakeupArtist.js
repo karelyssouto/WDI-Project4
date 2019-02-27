@@ -8,13 +8,9 @@ class EditMakeupArtist extends Component {
             name: '',
             hometown: '',
             img: '',
-            editForm: false 
-        }
+        },
+        editForm: false
         
-    }
-
-    toggleForm = () => {
-        this.setState({ editForm: !this.state.editForm })
     }
 
     handleChange = (e) => {
@@ -25,23 +21,27 @@ class EditMakeupArtist extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         const updateMakeupArtist = this.state.makeupartist
-        axios.patch(`/api/v1/makeupartist/${this.props.match.params.id}/`,updateMakeupArtist)
+        axios.patch(`/api/v1/makeupartist/${this.props.id}/`,updateMakeupArtist)
             .then((res) => {
                 // this.props.getAllMakeupArtist()
             })
     }
+    toggleForm = () => {
+        this.setState({ editForm: !this.state.editForm })
+    }
     deleteProfile = () =>{
-        axios.delete(`api/v1/makeupartist/${this.props.match.params.id}/`)
-            .then((res) => {
-                // this.props.getAllMakeupArtist()
+        axios.delete(`api/v1/makeupartist/${this.props.id}/`)
+            .then(() => {
+                this.props.getMakeupArtistById()
             })
     }
     render() {
         return (
             <div>
                 <Button color='danger' onClick={this.toggleForm}>click</Button>
+
             <Modal isOpen={this.state.editForm} toggle={this.toggleForm} className={this.props.className}>
-                <ModalHeader toggle={this.toggleForm}>Edit Your Profile</ModalHeader>
+                <ModalHeader toggle={this.props.toggleForm}>Edit Your Profile</ModalHeader>
                 <ModalBody>
                         <Input placeholder='name' name='name' value={this.state.makeupartist.name} onChange={this.handleChange} />
                         <Input placeholder='hometown' name='hometown' value={this.state.makeupartist.hometown} onChange={this.handleChange} />
