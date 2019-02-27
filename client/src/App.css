@@ -4,11 +4,25 @@
 
 .MainHeader{
   font-family: 'Staatliches', cursive;
+  font-size: 8rem
 }
 .SecondHeader{
   font-family: 'Nixie One', cursive;
+  padding-left: 20%;
+  font-size: 3rem
 }
-.link{
-  text-decoration: none;
-  color: pink
+.Button{
+  background: pink;
+  color:white;
+  font-family: 'Staatliches', cursive;
+}
+.LandingPage{
+  background: #581845 ;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center
+
 }

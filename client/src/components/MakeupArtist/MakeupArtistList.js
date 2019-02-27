@@ -10,7 +10,7 @@ class MakeupArtistList extends Component {
         this.getAllMakeupArtist()
     }
     getAllMakeupArtist = () => {
-        axios.get('/api/v1/makeupartist/').then((res) =>
+        axios.get('/api/v1/makeupartist').then((res) =>
             this.setState({ makeupartist: res.data }))
     }
     render() {
@@ -20,7 +20,7 @@ class MakeupArtistList extends Component {
                     return (<MakeupArtist
                         key={i}
                         makeupartist={makeupartist}
-                        makeupartistId={makeupartist.makeupartistId}
+                        makeupartistId={makeupartist.artistId}
                     />)
                 })}
 

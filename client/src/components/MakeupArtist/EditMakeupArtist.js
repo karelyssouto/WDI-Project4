@@ -27,13 +27,13 @@ class EditMakeupArtist extends Component {
         const updateMakeupArtist = this.state.makeupartist
         axios.patch(`/api/v1/makeupartist/${this.props.match.params.id}/`,updateMakeupArtist)
             .then((res) => {
-                this.props.getAllMakeupArtist()
+                // this.props.getAllMakeupArtist()
             })
     }
     deleteProfile = () =>{
-        axios.delete(`api/v1/makeupartist/${this.match.params.id}`)
+        axios.delete(`api/v1/makeupartist/${this.props.match.params.id}/`)
             .then((res) => {
-                this.props.getAllMakeupArtist()
+                // this.props.getAllMakeupArtist()
             })
     }
     render() {
@@ -49,7 +49,7 @@ class EditMakeupArtist extends Component {
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={this.handleSubmit}>Do Something</Button>
-                    <Button color="danger" onClick={this.toggleForm}>Delete Your Profile</Button>
+                    <Button color="danger" onClick={this.deleteProfile}>Delete Your Profile</Button>
                 </ModalFooter>
             </Modal>
             </div>   

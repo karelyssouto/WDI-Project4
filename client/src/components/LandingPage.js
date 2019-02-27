@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import {Button } from 'reactstrap'
 
 
 class LandingPage extends Component {
 
     render() {
         return (
-            <div className='App'>
+            <div className='App LandingPage'>
                 <h1 className='MainHeader'>Beauty</h1>
                 <h2 className='SecondHeader'>Calendar</h2>
-                <button onClick={this.getCurrentUser}>Get Started</button>
-                <Link to='/makeupartist' className='link'>Get Started</Link>
+                <Link to='/new'><Button className='Button' color='warning'>Get Started</Button></Link>
             </div>
         );
     }

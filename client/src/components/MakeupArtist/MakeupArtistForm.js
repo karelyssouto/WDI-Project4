@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-
+import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class MakeupArtistForm extends Component {
     state = {
@@ -28,11 +28,18 @@ class MakeupArtistForm extends Component {
     render() {
         return (
             <div>
-                
-                    <input placeholder='name' name='name' value={this.state.makeupartist.name} onChange={this.handleChange}/>
-                    <input placeholder='hometown' name='hometown' value={this.state.makeupartist.hometown} onChange={this.handleChange}/>
-                    <input placeholder='img' name='img' value={this.state.makeupartist.img} onChange={this.handleChange}/>
-                    <button onClick={this.handleSubmit}>submit</button>
+
+             <Label>Name</Label>
+             <Input type="text" placeholder='name' name='name' value={this.state.makeupartist.name} onChange={this.handleChange} />
+
+                            
+             <Label >Hometown</Label>
+            <Input placeholder='hometown' name='hometown' value={this.state.makeupartist.hometown} onChange={this.handleChange} />
+                            
+            <Label>Your Picture</Label>
+             <Input placeholder='img' name='img' value={this.state.makeupartist.img} onChange={this.handleChange}/>
+        
+            <Button onClick={this.handleSubmit}>Create User</Button>
             </div>
         );
     }

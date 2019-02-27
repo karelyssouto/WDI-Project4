@@ -13,7 +13,7 @@ class MakeupArtistProfile extends Component {
         this.getMakeupArtistById()
     }
     getMakeupArtistById = () => {
-        axios.get(`/api/v1/makeupartist/${this.props.match.params.id}/`).then((res) =>
+        axios.get(`/api/v1/makeupartist/${this.props.match.params.artistId}/`).then((res) =>
             this.setState({ makeupartist: res.data }))
     }
     render() {
@@ -22,7 +22,10 @@ class MakeupArtistProfile extends Component {
                 <AppointmentList
                     getAppointments={this.props.getAppointments}
                 />
-                <EditMakeupArtist  />
+                <EditMakeupArtist
+                    updateMakeupArtist={this.props.updateMakeupArtist}
+                    deleteProfile={this.props.deleteProfile}
+                />
             </div>
         );
     }
