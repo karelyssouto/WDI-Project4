@@ -4,7 +4,6 @@ import './App.css';
 import LandingPage from './components/LandingPage';
 import MakeupArtistForm from './components/MakeupArtist/MakeupArtistForm'
 import MakeupArtistList from './components/MakeupArtist/MakeupArtistList';
-import AddAppointmentForm from './components/Appointments/AddAppointmentForm';
 import MakeupArtistProfile from './components/MakeupArtist/MakeupArtistProfile';
 import Appointment from './components/Appointments/Appointment';
 

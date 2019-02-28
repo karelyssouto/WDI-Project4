@@ -40,8 +40,8 @@ class AddClientForm extends Component {
                 <Modal isOpen={this.state.addForm} toggle={this.toggleForm} className={this.props.className}>
                     <ModalHeader toggle={this.props.toggleForm}>Edit Your Profile</ModalHeader>
                     <ModalBody>
-                        <Input  placeholder='name' name='name' value={this.state.client.name} onChange={this.handleChange} />
-                        <Input placeholder='img' name='img' value={this.state.client.img} onChange={this.handleChange} />
+                        <Input  placeholder='Name' name='name' value={this.state.client.name} onChange={this.handleChange} />
+                        <Input placeholder='Img' name='img' value={this.state.client.img} onChange={this.handleChange} />
                         <Input placeholder='Skin Tone' name='skinTone' value={this.state.client.skinTone} onChange={this.handleChange} />
                         <Input placeholder='Skin Type' name='skinType' value={this.state.client.skinType} onChange={this.handleChange} />
 
