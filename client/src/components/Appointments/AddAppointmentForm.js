@@ -34,12 +34,12 @@ class AddAppointmentForm extends Component {
 
                 <Button color='danger' onClick={this.toggleForm}>click</Button>
 
-                <Modal isOpen={this.state.editForm} toggle={this.toggleForm} className={this.props.className}>
+                <Modal isOpen={this.state.addForm} toggle={this.toggleForm} className={this.props.className}>
                     <ModalHeader toggle={this.props.toggleForm}>Edit Your Profile</ModalHeader>
                     <ModalBody>
-                        <Input placeholder='name' name='name' value={this.state.makeupartist.name} onChange={this.handleChange} />
-                        <Input placeholder='hometown' name='hometown' value={this.state.makeupartist.hometown} onChange={this.handleChange} />
-                        <Input placeholder='img' name='img' value={this.state.makeupartist.img} onChange={this.handleChange} />
+                        <Input type='datetime-local' placeholder='date' name='date' value={this.state.appointments.date} onChange={this.handleChange} />
+                        <Input placeholder='location' name='location' value={this.state.appointments.location} onChange={this.handleChange} />
+                        <Input placeholder='category' name='category' value={this.state.appointments.category} onChange={this.handleChange} />
                     </ModalBody>
                     <ModalFooter>
                         <Button color="primary" onClick={this.handleSubmit}>Do Something</Button>

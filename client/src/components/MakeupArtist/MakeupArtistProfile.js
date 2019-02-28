@@ -45,6 +45,7 @@ class MakeupArtistProfile extends Component {
 
                 <AddAppointmentForm 
                     toggle={this.props.toggleForm}
+                    createAppointment={this.props.createAppointment}
                 />
                 <div/>
             </div>
