@@ -10,9 +10,11 @@ import AddIcon from '@material-ui/icons/Add';
 class AddAppointmentForm extends Component {
     state = {
         appointments: {
+            artistId: this.props.id,
             date: '',
             location: '',
             category: '',
+            clientId: ''
         },
         addForm: false
     }
@@ -40,11 +42,12 @@ class AddAppointmentForm extends Component {
                 </Fab>
 
                 <Modal isOpen={this.state.addForm} toggle={this.toggleForm} className={this.props.className}>
-                    <ModalHeader toggle={this.props.toggleForm}>Edit Your Profile</ModalHeader>
+                    <ModalHeader toggle={this.props.toggleForm}>Add a </ModalHeader>
                     <ModalBody>
                         <Input type='datetime-local' placeholder='date' name='date' value={this.state.appointments.date} onChange={this.handleChange} />
                         <Input placeholder='location' name='location' value={this.state.appointments.location} onChange={this.handleChange} />
                         <Input placeholder='category' name='category' value={this.state.appointments.category} onChange={this.handleChange} />
+                        <Input type='number' placeholder='Client Id' name='clientId' value={this.state.appointments.clientId} onChange={this.handleChange} />
                     </ModalBody>
                     <ModalFooter>
                         <Link to='/makeupartist/:id'><Button color="primary" onClick={this.handleSubmit}>Add Appointment</Button></Link>

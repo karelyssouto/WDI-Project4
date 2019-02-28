@@ -41,6 +41,7 @@ class MakeupArtistProfile extends Component {
                 />
 
                 <AddAppointmentForm 
+                    id={this.props.match.params.id}
                     toggle={this.props.toggleForm}
                     createAppointment={this.props.createAppointment}
                 />

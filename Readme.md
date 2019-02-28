@@ -5,9 +5,9 @@
 
 ## Trello, Wireframes and ERD
 
-[Trello](https://trello.com/b/kmv9nkF3/wdi-unit4project)
-[Wireframes](https://xd.adobe.com/spec/80bd54ea-1f8f-4c78-44b7-cb70ff0363e4-f68c/)
-![ERD](/images/ERD4.png)
+* [Trello](https://trello.com/b/kmv9nkF3/wdi-unit4project)
+* [Wireframes](https://xd.adobe.com/spec/80bd54ea-1f8f-4c78-44b7-cb70ff0363e4-f68c/)
+ ![ERD](/images/ERD4.png)
 
 ## What I learned from this project
 * Deeper understanding of Django

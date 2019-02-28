@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Button, Label, Input } from 'reactstrap';
+import { Button, Input } from 'reactstrap';
 import { Link } from '@material-ui/core';
 
 class MakeupArtistForm extends Component {

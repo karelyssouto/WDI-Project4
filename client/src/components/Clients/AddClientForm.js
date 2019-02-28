@@ -11,6 +11,7 @@ class AddClientForm extends Component {
             img: '',
             skinTone: '',
             skinType: '',
+            clientId: ''
         },
         addForm: false
     }
@@ -44,6 +45,7 @@ class AddClientForm extends Component {
                         <Input placeholder='Img' name='img' value={this.state.client.img} onChange={this.handleChange} />
                         <Input placeholder='Skin Tone' name='skinTone' value={this.state.client.skinTone} onChange={this.handleChange} />
                         <Input placeholder='Skin Type' name='skinType' value={this.state.client.skinType} onChange={this.handleChange} />
+                        <Input type='number' placeholder='Client Id' name='clientId' value={this.state.client.clientId} onChange={this.handleChange} />
 
                     </ModalBody>
                     <ModalFooter>
