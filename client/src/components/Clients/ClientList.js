@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import axios from 'axios'
+import { Link } from 'react-router-dom'
+import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete'
 
 class ClientList extends Component {
+    deleteClient = () => {
+        axios.delete(`/api/v1/client/${this.props.match.params.id}/`)
+            .then(() => {
+            })
+    }
     render() {
         return (
             <div>
@@ -13,6 +22,11 @@ class ClientList extends Component {
                             </div>
                         )
                 })}
+
+                <Link to={`/`}><Button variant="contained" color="secondary" onClick={this.deleteClient} >
+                    Delete Client
+                     <DeleteIcon />
+                </Button></Link>
             </div>
         );
     }

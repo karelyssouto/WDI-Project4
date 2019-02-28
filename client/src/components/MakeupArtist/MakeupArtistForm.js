@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Button, Label, Input } from 'reactstrap';
+import { Link } from '@material-ui/core';
 
 class MakeupArtistForm extends Component {
     state = {
@@ -27,19 +28,21 @@ class MakeupArtistForm extends Component {
 
     render() {
         return (
-            <div>
-
-             <Label>Name</Label>
-             <Input type="text" placeholder='name' name='name' value={this.state.makeupartist.name} onChange={this.handleChange} />
+            <div className='NewMakeupArtist '>
+            <h1 className='Header'>Create Your Profile</h1>
+            <div className='formContainer'>
+             <h3 className='Button'>Name</h3>
+             <Input type="text" placeholder='Name' name='name' value={this.state.makeupartist.name} onChange={this.handleChange} />
 
                             
-             <Label >Hometown</Label>
-            <Input placeholder='hometown' name='hometown' value={this.state.makeupartist.hometown} onChange={this.handleChange} />
+            <h3 className='Button'>Hometown</h3>
+            <Input placeholder='Hometown' name='hometown' value={this.state.makeupartist.hometown} onChange={this.handleChange} />
                             
-            <Label>Your Picture</Label>
-             <Input placeholder='img' name='img' value={this.state.makeupartist.img} onChange={this.handleChange}/>
+            <h3 className='Button'>Your Picture</h3>
+             <Input placeholder='Image URL' name='img' value={this.state.makeupartist.img} onChange={this.handleChange}/>
         
-            <Button onClick={this.handleSubmit}>Create User</Button>
+            <Link to='/makeupartist'><Button color='warning' className='Button' onClick={this.handleSubmit}>Create User</Button></Link>
+            </div>
             </div>
         );
     }

@@ -49,7 +49,7 @@ class EditMakeupArtist extends Component {
                 <Fab aria-label="Edit" onClick={this.toggleForm}>
                     <Icon>edit_icon</Icon>
                 </Fab>
-            <Modal isOpen={this.state.editForm} toggle={this.toggleForm} className={this.props.className}>
+            <Modal isOpen={this.state.editForm} toggle={this.toggleForm} >
                 <ModalHeader toggle={this.props.toggleForm}>Edit Your Profile</ModalHeader>
                 <ModalBody>
                         <Input placeholder='name' name='name' value={this.state.makeupartist.name} onChange={this.handleChange} />
@@ -57,8 +57,8 @@ class EditMakeupArtist extends Component {
                         <Input placeholder='img' name='img' value={this.state.makeupartist.img} onChange={this.handleChange} />
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={this.handleSubmit}>Do Something</Button>
-                    <Link to='/makeupartist'><Button variant="contained" color="secondary"onClick={this.deleteProfile} >
+                    <Link to={`/makeupartist/`}></Link><Button color="primary" onClick={this.handleSubmit}>Update Your Info</Button>
+                    <Link to='/makeupartist/'><Button variant="contained" color="secondary"onClick={this.deleteProfile} >
                         Delete Profile
                      <DeleteIcon />
                         </Button></Link>

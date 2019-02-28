@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import '../../App.css'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input } from 'reactstrap';
 import Fab from '@material-ui/core/Fab';
@@ -25,7 +26,7 @@ class AddAppointmentForm extends Component {
         const createAppointment = this.state.appointments
         axios.post('/api/v1/appointments/', createAppointment)
             .then(() => {
-                this.props.getAppointments()
+                // this.props.getAppointments()
             })
     }
     toggleForm = () => {
@@ -46,7 +47,7 @@ class AddAppointmentForm extends Component {
                         <Input placeholder='category' name='category' value={this.state.appointments.category} onChange={this.handleChange} />
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.handleSubmit}>Do Something</Button>
+                        <Link to='/makeupartist/:id'><Button color="primary" onClick={this.handleSubmit}>Add Appointment</Button></Link>
                     </ModalFooter>
                 </Modal>
             </div>

@@ -1,20 +1,22 @@
 .App {
   text-align: center;
 }
-
+/* LANDING PAGE */
+.focus-in-expand {
+	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 .MainHeader{
   font-family: 'Staatliches', cursive;
-  font-size: 8rem
+  font-size: 8rem;
+  
 }
 .SecondHeader{
   font-family: 'Nixie One', cursive;
   padding-left: 20%;
-  font-size: 3rem
-}
-.Button{
-  background: pink;
-  color:white;
-  font-family: 'Staatliches', cursive;
+  font-size: 3rem;
+  animation-delay: 1s;
+  animation-duration: 4s
 }
 .LandingPage{
   background: #581845 ;
@@ -26,6 +28,50 @@
   justify-content: center
 
 }
+/* -------------- */
+
+/* CREATE MAKEUP ARTIST */
+.NewMakeupArtist{
+  background: #581845 ;
+  color:white;
+  width:100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+}
+.Header{
+  font-family: 'Staatliches', cursive;
+  font-size: 5rem
+}
+.formContainer{
+  width: 35vw;
+  height: 50vh;
+  text-align: left;
+}
+
+/* ------------------ */
+.Button{
+  font-family: 'Staatliches', cursive;
+}
+
 .addButton{
   background-color: #fff9c4
+}
+/* MAKEUP ARTIST LIST */
+.artistList{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.artistImg{
+  width: 30vw;
+  height: 40vh; 
+  text-align: center
+}
+.cardContainer{
+  width: 45vw;
+  background: #581845
 }

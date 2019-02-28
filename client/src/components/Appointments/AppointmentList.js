@@ -5,7 +5,7 @@ class AppointmentList extends Component {
     render() {
         return (
             <div>
-                {this.props.appointments.appointments.map((appointment, i) => {
+                {this.props.makeupartist.appointments.map((appointment, i) => {
                     return (<div key= {i}>
 
                         <Link to={`/${appointment.clientId}`}><h5>{appointment.date}</h5></Link>

@@ -24,6 +24,7 @@ class Appointment extends Component {
             .then(() => {
             })
     }
+
     render() {
         return (
             <div>
@@ -42,6 +43,7 @@ class Appointment extends Component {
                 client={this.state.appointment}
                 id={this.state.appointment.clientId}
                 />
+
             </div>
         );
     }
