@@ -19,8 +19,8 @@ class MakeupArtistList extends Component {
         return (
             <div>
                 {this.state.makeupartist.map((makeupartist, i) =>{
-                    return (<Media>
-                                <Media left key={i}>
+                    return (<Media key={i}>
+                                <Media left >
                                     <Media object src={makeupartist.img} alt='Makeup Artist' />
                                 </Media>
                                 <Media body>

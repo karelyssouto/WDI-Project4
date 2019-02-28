@@ -4,7 +4,6 @@ import './App.css';
 import LandingPage from './components/LandingPage';
 import MakeupArtistForm from './components/MakeupArtist/MakeupArtistForm'
 import MakeupArtistList from './components/MakeupArtist/MakeupArtistList';
-import AppointmentList from './components/Appointments/AppointmentList';
 import AddAppointmentForm from './components/Appointments/AddAppointmentForm';
 import MakeupArtistProfile from './components/MakeupArtist/MakeupArtistProfile';
 
@@ -22,7 +21,7 @@ class App extends Component {
             <Route exact path='/new' component={MakeupArtistForm} />
             <Route exact path='/makeupartist' component={MakeupArtistList} />
             <Route exact path='/makeupartist/:id' component={MakeupArtistProfile} />
-            <Route exact path='/makeupartist/:id/new' component={AddAppointmentForm} />
+            {/* <Route exact path='/makeupartist/:id/new' component={AddAppointmentForm} /> */}
 
           </Switch>
         </Router>

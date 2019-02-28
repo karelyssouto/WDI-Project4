@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import '../../App.css'
 import axios from 'axios'
-import {Button} from 'reactstrap'
 import EditMakeupArtist from './EditMakeupArtist';
 import AppointmentList from '../Appointments/AppointmentList';
 import AddAppointmentForm from '../Appointments/AddAppointmentForm';
-
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
 
 class MakeupArtistProfile extends Component {
     state = {
-        makeupartist: {}, 
-        editForm: false
+        makeupartist: {
+            appointments: []
+        }, 
     }
     componentDidMount() {
         this.getMakeupArtistById()
@@ -19,9 +20,7 @@ class MakeupArtistProfile extends Component {
         axios.get(`/api/v1/makeupartist/${this.props.match.params.id}/`).then((res) =>
             this.setState({ makeupartist: res.data }))
     }
-    // toggleForm = () => {
-    //     this.setState({ editForm : !this.state.editForm })
-    // }
+
     render() {
         return (
             <div className='App'>
@@ -30,7 +29,7 @@ class MakeupArtistProfile extends Component {
                 <h1>{this.state.makeupartist.name}</h1>
                 <h3>{this.state.makeupartist.hometown}</h3>
                 <AppointmentList
-                    getAppointments={this.props.getAppointments}
+                    appointments={this.state.makeupartist}
                 />
                 
                 <EditMakeupArtist
@@ -40,11 +39,18 @@ class MakeupArtistProfile extends Component {
                     updateMakeupArtist={this.props.updateMakeupArtist}
                     deleteProfile={this.props.deleteProfile}
                 />
-                {/* <AddAppointmentForm /> */}
+                <Fab color="primary" aria-label="Add" >
+                    <AddIcon />
+                </Fab>
+
+                <AddAppointmentForm 
+                    toggle={this.props.toggleForm}
+                />
                 <div/>
             </div>
         );
     }
 }
+
 
 export default MakeupArtistProfile;
