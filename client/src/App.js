@@ -21,8 +21,7 @@ class App extends Component {
             <Route exact path='/new' component={MakeupArtistForm} />
             <Route exact path='/makeupartist' component={MakeupArtistList} />
             <Route exact path='/makeupartist/:id' component={MakeupArtistProfile} />
-            {/* <Route exact path='/makeupartist/:id/new' component={AddAppointmentForm} /> */}
-
+            
           </Switch>
         </Router>
       </div>

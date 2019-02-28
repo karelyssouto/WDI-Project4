@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import Appointment from '../Appointments/Appointment'
+import {Link} from 'react-router-dom'
 
 class AppointmentList extends Component {
-    // state = {
-    //     appointments: []
-    // }
- 
-    // getAppointments = () => {
-    //     axios.get('/api/v1/appointments/').then((res) =>
-    //         this.setState({ appointments: res.data }))
-    // }
     render() {
         return (
             <div>
                 {this.props.appointments.appointments.map((appointment, i) => {
-                    return (<Appointment
-                        key={i}
+                    return (<div 
+                        key= { i }
                         appointment={appointment}
-                        appointmentId={appointment.appointmentId}
-                    />)
+                        appointmentId={appointment.appointmentid}>
+
+                        <Link to='/appointmentid'><h5>{appointment.date}</h5></Link>
+                        <h5>{appointment.location}</h5>
+                    
+                    </div>
+                        
+                    )
                 })}
             </div>
         );

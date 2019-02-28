@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import '../../App.css'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input } from 'reactstrap';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
 
 
 class AddAppointmentForm extends Component {
@@ -31,8 +34,9 @@ class AddAppointmentForm extends Component {
     render() {
         return (
             <div>
-
-                <Button color='danger' onClick={this.toggleForm}>click</Button>
+                <Fab className='addButton' aria-label="Add"onClick={this.toggleForm} >
+                    <AddIcon />
+                </Fab>
 
                 <Modal isOpen={this.state.addForm} toggle={this.toggleForm} className={this.props.className}>
                     <ModalHeader toggle={this.props.toggleForm}>Edit Your Profile</ModalHeader>

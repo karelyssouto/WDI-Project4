@@ -4,8 +4,7 @@ import axios from 'axios'
 import EditMakeupArtist from './EditMakeupArtist';
 import AppointmentList from '../Appointments/AppointmentList';
 import AddAppointmentForm from '../Appointments/AddAppointmentForm';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
+
 
 class MakeupArtistProfile extends Component {
     state = {
@@ -39,9 +38,6 @@ class MakeupArtistProfile extends Component {
                     updateMakeupArtist={this.props.updateMakeupArtist}
                     deleteProfile={this.props.deleteProfile}
                 />
-                <Fab color="primary" aria-label="Add" >
-                    <AddIcon />
-                </Fab>
 
                 <AddAppointmentForm 
                     toggle={this.props.toggleForm}
