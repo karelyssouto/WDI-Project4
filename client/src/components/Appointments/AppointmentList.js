@@ -6,12 +6,9 @@ class AppointmentList extends Component {
         return (
             <div>
                 {this.props.appointments.appointments.map((appointment, i) => {
-                    return (<div 
-                        key= { i }
-                        appointment={appointment}
-                        appointmentId={appointment.appointmentid}>
+                    return (<div key= {i}>
 
-                        <Link to='/appointmentid'><h5>{appointment.date}</h5></Link>
+                        <Link to={`/${appointment.clientId}`}><h5>{appointment.date}</h5></Link>
                         <h5>{appointment.location}</h5>
                     
                     </div>

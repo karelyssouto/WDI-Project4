@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input } from 'reactstrap';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
 
 class AddClientForm extends Component {
     state= {
@@ -9,7 +11,8 @@ class AddClientForm extends Component {
             img: '',
             skinTone: '',
             skinType: '',
-        }
+        },
+        addForm: false
     }
     handleChange = (e) => {
         const newState = { ...this.state.client }
@@ -23,6 +26,9 @@ class AddClientForm extends Component {
             .then((res) => {
                 this.props.getClient()
             })
+    }
+    toggleForm = () => {
+        this.setState({ addForm: !this.state.addForm })
     }
     render() {
         return (
@@ -40,6 +46,21 @@ class AddClientForm extends Component {
                 <Input placeholder='img' name='img' value={this.state.client.skinType} onChange={this.handleChange} />
 
                 <Button onClick={this.handleSubmit}>Create User</Button>
+                <Fab className='addButton' aria-label="Add" onClick={this.toggleForm} >
+                    <AddIcon />
+                </Fab>
+
+                <Modal isOpen={this.state.addForm} toggle={this.toggleForm} className={this.props.className}>
+                    <ModalHeader toggle={this.props.toggleForm}>Edit Your Profile</ModalHeader>
+                    <ModalBody>
+                        <Input  placeholder='name' name='name' value={this.state.client.name} onChange={this.handleChange} />
+                        <Input placeholder='img' name='img' value={this.state.client.img} onChange={this.handleChange} />
+                        <Input placeholder='category' name='category' value={this.state.client.category} onChange={this.handleChange} />
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={this.handleSubmit}>Do Something</Button>
+                    </ModalFooter>
+                </Modal>
             </div>
         );
     }

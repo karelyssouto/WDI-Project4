@@ -29,6 +29,7 @@ class MakeupArtistProfile extends Component {
                 <h3>{this.state.makeupartist.hometown}</h3>
                 <AppointmentList
                     appointments={this.state.makeupartist}
+                    id={this.state.makeupartist.appointments.clientId}
                 />
                 
                 <EditMakeupArtist
