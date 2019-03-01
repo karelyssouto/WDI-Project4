@@ -22,16 +22,7 @@ class MakeupArtistProfile extends Component {
 
     render() {
         return (
-            <div className='App'>
-
-                <img src={this.state.makeupartist.img} alt='Profile Pic'/>
-                <h1>{this.state.makeupartist.name}</h1>
-                <h3>{this.state.makeupartist.hometown}</h3>
-                <AppointmentList
-                    makeupartist={this.state.makeupartist}
-                    id={this.state.makeupartist.appointments.clientId}
-                />
-                
+            <div className='background'>                
                 <EditMakeupArtist
                     getMakeupArtistById={this.getMakeupArtistById}
                     id={this.state.makeupartist.artistId}
@@ -39,13 +30,26 @@ class MakeupArtistProfile extends Component {
                     updateMakeupArtist={this.props.updateMakeupArtist}
                     deleteProfile={this.props.deleteProfile}
                 />
+                
+                <img className='profileimg Button' src={this.state.makeupartist.img} alt='Profile Pic'/>           
+                <div className='App SecondHeader'> 
+                <h1>{this.state.makeupartist.name}</h1>
+                <h3>{this.state.makeupartist.hometown}</h3>
+                
 
+                <AppointmentList
+                    makeupartist={this.state.makeupartist}
+                    id={this.state.makeupartist.appointments.clientId}
+                />
+                
+
+                <div/>
+            </div>     
                 <AddAppointmentForm 
                     id={this.props.match.params.id}
                     toggle={this.props.toggleForm}
                     createAppointment={this.props.createAppointment}
                 />
-                <div/>
             </div>
         );
     }

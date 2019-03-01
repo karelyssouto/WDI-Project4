@@ -6,7 +6,7 @@ import DeleteIcon from '@material-ui/icons/Delete'
 
 class ClientList extends Component {
     deleteClient = () => {
-        axios.delete(`/api/v1/client/${this.props.match.params.id}/`)
+        axios.delete(`/api/v1/client/${this.props.id}`)
             .then(() => {
             })
     }
@@ -17,16 +17,18 @@ class ClientList extends Component {
                     return (<div key={i}>
 
                                 <h5>{client.name}</h5>
+                                <img src={client.img} alt='Client Img'/>
                                 <h5>{client.skinType}</h5>
+                                <h5>{client.skinTone}</h5>
 
                             </div>
                         )
                 })}
 
-                <Link to={`/`}><Button variant="contained" color="secondary" onClick={this.deleteClient} >
+                <Button variant="contained" color="secondary" onClick={this.deleteClient} >
                     Delete Client
                      <DeleteIcon />
-                </Button></Link>
+                </Button>
             </div>
         );
     }

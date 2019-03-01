@@ -27,18 +27,23 @@ class Appointment extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Appointment Details:</h1>
-                <h1>{this.state.appointment.date}</h1>
-
-                <Link to={`/${this.state.appointment.clientId}`}><Button variant="contained" color="secondary" onClick={this.deleteAppointment} >
-                    Delete Appointment
-                     <DeleteIcon />
-                </Button></Link>
+            <div class='background'>                
                 <AddClientForm
                     toggle={this.props.toggleForm}
                     createClient={this.props.createClient}
                 />
+                <h1 className='Button App'>Appointment Details:</h1>
+                <h1 className='Button App'>{this.state.appointment.date}</h1>
+                <h3 className='Button App'>{this.state.appointment.location}</h3>
+                <h5 className='Button App'>{this.state.appointment.category}</h5>
+                
+
+
+                <Link to={`/${this.state.appointment.clientId}`}><Button className='App' variant="contained" color="secondary" onClick={this.deleteAppointment} >
+                    Delete Appointment
+                     <DeleteIcon />
+                </Button></Link>
+
                 <ClientList
                 client={this.state.appointment}
                 id={this.state.appointment.clientId}

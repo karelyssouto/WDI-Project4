@@ -5,6 +5,7 @@ class AppointmentList extends Component {
     render() {
         return (
             <div>
+                <h1 className='Button'>Your Appointments:</h1>
                 {this.props.makeupartist.appointments.map((appointment, i) => {
                     return (<div key= {i}>
 

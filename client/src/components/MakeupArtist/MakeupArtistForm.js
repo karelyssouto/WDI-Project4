@@ -22,7 +22,7 @@ class MakeupArtistForm extends Component {
         const createMakeupArtist = this.state.makeupartist
         axios.post('/api/v1/makeupartist/', createMakeupArtist)
             .then((res) => {
-                this.props.getAllMakeupArtist()
+                this.getAllMakeupArtist()
             })
     }
 

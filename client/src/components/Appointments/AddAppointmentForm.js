@@ -42,7 +42,7 @@ class AddAppointmentForm extends Component {
                 </Fab>
 
                 <Modal isOpen={this.state.addForm} toggle={this.toggleForm} className={this.props.className}>
-                    <ModalHeader toggle={this.props.toggleForm}>Add a </ModalHeader>
+                    <ModalHeader toggle={this.props.toggleForm}>Add an Appointment </ModalHeader>
                     <ModalBody>
                         <Input type='datetime-local' placeholder='date' name='date' value={this.state.appointments.date} onChange={this.handleChange} />
                         <Input placeholder='location' name='location' value={this.state.appointments.location} onChange={this.handleChange} />
